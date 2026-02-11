@@ -1,9 +1,9 @@
 :root {
-  --primary-blue: #0073e6;    
-  --bg-white: #ffffff;        
-  --soft-gray: #f2f2f2;       
-  --action-green: #78c850;    
-  --text-dark: #333333;      
+    --primary-blue: #0073e6;
+    --bg-white: #ffffff;
+    --soft-gray: #f2f2f2;
+    --action-green: #78c850;
+    --text-dark: #333333;
 }
 
 * {
@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family:  Arial,  sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: var(--bg-white);
     color: var(--text-dark);
@@ -25,5 +25,65 @@ body {
     padding: 20px;
 }
 
+.navbar {
+    background-color: var(--primary-blue);
+    padding: 10px 0;
+}
 
+.navbar .nav-link {
+    color: var(--bg-white);
+    margin-right: 15px;
+    text-decoration: none;
+}
 
+.navbar .nav-link:hover {
+    text-decoration: underline;
+}
+
+.header {
+    background-color: var(--soft-gray);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.header h1 {
+    color: var(--primary-blue);
+    font-size: 2.5em;
+}
+
+.content {
+    padding: 20px 0;
+}
+
+.content h2 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.content p {
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--action-green);
+    color: var(--bg-white);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #5cb85c;
+}
+
+.footer {
+    background-color: var(--soft-gray);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.footer p {
+    color: var(--text-dark);
+}
