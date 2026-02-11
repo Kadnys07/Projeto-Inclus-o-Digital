@@ -1,0 +1,29 @@
+:root {
+  --primary-blue: #0073e6;    
+  --bg-white: #ffffff;        
+  --soft-gray: #f2f2f2;       
+  --action-green: #78c850;    
+  --text-dark: #333333;      
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  Arial,  sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+
+
