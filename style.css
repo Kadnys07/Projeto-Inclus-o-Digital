@@ -1,9 +1,9 @@
 :root {
-    --primary-blue: #0073e6;
-    --bg-white: #ffffff;
-    --soft-gray: #f2f2f2;
-    --action-green: #78c850;
-    --text-dark: #333333;
+    --cor-primaria: #0073e6;
+    --cor-texto: #333;
+    --cor-fundo: #fff;
+    --cor-destaque: #78c850;
+    --espacamento-padrao: 20px;
 }
 
 * {
@@ -12,6 +12,8 @@
     box-sizing: border-box;
 }
 
+/* Estilo do Corpo */
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -19,71 +21,62 @@ body {
     color: var(--text-dark);
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+main {
+    flex: 1;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--espacamento-padrao) 0;
+}
+
+footer {
+    text-align: center;
+    padding: var(--espacamento-padrao);
+    background-color: var(--cor-primaria);
+}
+
+footer p {
+    color: white;
+    font-size: 1rem;
+}
+
+/* Navbar*/
 
 .navbar {
-    background-color: var(--primary-blue);
-    padding: 10px 0;
+    background-color: var(--cor-primaria);
+    padding: 1rem;
 }
 
-.navbar .nav-link {
-    color: var(--bg-white);
-    margin-right: 15px;
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
     text-decoration: none;
+    transition: 0.3s;
 }
 
-.navbar .nav-link:hover {
-    text-decoration: underline;
+.navbar a:hover {
+    color: yellow
 }
 
-.header {
-    background-color: var(--soft-gray);
-    padding: 40px 0;
-    text-align: center;
-}
+/* Login */
 
-.header h1 {
-    color: var(--primary-blue);
-    font-size: 2.5em;
-}
-
-.content {
-    padding: 20px 0;
-}
-
-.content h2 {
-    color: var(--primary-blue);
-    margin-bottom: 10px;
-}
-
-.content p {
-    margin-bottom: 20px;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--action-green);
-    color: var(--bg-white);
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background-color: #5cb85c;
-}
-
-.footer {
-    background-color: var(--soft-gray);
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-.footer p {
-    color: var(--text-dark);
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: var(--espacamento-padrao);
+    background-color: var(--cor-fundo);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
