@@ -70,13 +70,26 @@ footer p {
     color: yellow
 }
 
-/* Login */
+.container {
+    display: flex;
+    gap: var(--espacamento-padrao);
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-.login-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: var(--espacamento-padrao);
-    background-color: var(--cor-fundo);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+h1 {
+    text-align: center;
+    margin-bottom: var(--espacamento-padrao);
+    margin-top: var(--espacamento-padrao);
+}
+
+button {
+    justify-content: center;
+    background-color:green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 4px;
 }
