@@ -1,95 +1,226 @@
 :root {
     --cor-primaria: #0073e6;
-    --cor-texto: #333;
-    --cor-fundo: #fff;
     --cor-destaque: #78c850;
-    --espacamento-padrao: 20px;
+    --cor-fundo: #f2f2f2;
+    --cor-texto: #333;
+    --branca: #fff;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilo do Corpo */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: var(--bg-white);
-    color: var(--text-dark);
-}
-
-body {
-    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: var(--branca);
+    color: var(--cor-texto);
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
+
+
+.navbar {
+    background-color: var(--cor-primaria);
+    padding: 0; /* Remove espaços extras para ficar alinhado */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.navbar nav {
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.navbar ul {
+    list-style: none; 
+    display: flex;    
+    justify-content: center; 
+}
+
+/* Os Links */
+.navbar a {
+    display: block;
+    color: var(--branca);
+    text-decoration: none;
+    padding: 20px 25px; /* Deixa o botão 'gordinho' e fácil de clicar */
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background 0.3s; /* Animação suave de cor */
+}
+
+/* Efeito ao passar o mouse */
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Clareia levemente o fundo */
+    border-bottom: 4px solid var(--cor-destaque); /* Linha verde embaixo */
+}
+
 
 main {
     flex: 1;
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: var(--espacamento-padrao) 0;
-}
-
-footer {
-    text-align: center;
-    padding: var(--espacamento-padrao);
-    background-color: var(--cor-primaria);
-}
-
-footer p {
-    color: white;
-    font-size: 1rem;
-}
-
-/* Navbar*/
-
-.navbar {
-    background-color: var(--cor-primaria);
-    padding: 1rem;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.navbar a:hover {
-    color: yellow
-}
-
-.container {
-    display: flex;
-    gap: var(--espacamento-padrao);
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: 40px auto; 
+    text-align: center; 
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: var(--espacamento-padrao);
-    margin-top: var(--espacamento-padrao);
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
 }
 
-button {
+p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.8; /* Texto mais 'respirável' */
+    max-width: 800px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+
+.galeria-flex {
+    display: flex;
     justify-content: center;
-    background-color:green;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.meu-card {
+    background: var(--branca);
+    border: 1px solid #e1e1e1;
+    border-radius: 12px; 
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; 
+}
+
+.meu-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.meu-card img, .meu-card video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center; 
+}
+
+.card-body h3 {
+    margin-bottom: 10px;
+    color: var(--cor-texto);
+}
+
+.btn-acao {
+    display: inline-block;
+    background-color: var(--cor-destaque);
+    color: var(--branca);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px; /* Botão arredondado moderno */
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.2s;
+}
+
+.btn-acao:hover {
+    background-color: #5cb85c;
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--branca);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: auto;
+}
+
+.login-box {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 380px;       
+    margin: 30px auto;      
+    padding: 40px;          
+    border-radius: 10px;    
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
+    border: 1px solid #f1f1f1; 
+    text-align: left;       
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.campo-texto {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;    
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa; 
+    font-size: 16px;
+    transition: 0.3s;       
+}
+
+.campo-texto:focus {
+    background-color: #fff;
+    border-color: #0073e6;  
+    outline: none;
+}
+
+.botao-entrar {
+    width: 100%;
+    padding: 14px;
+    background-color:#5cb85c;
     color: white;
     border: none;
-    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
-    border-radius: 4px;
+}
+
+.botao-entrar:hover {
+    background-color: #4b964b; 
+
+}
+
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;         
+    justify-content: center; 
+    gap: 30px;               
+}
+
+.card {
+    background-color: white;
+    width: 300px;            
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;      
+    
+    display: flex;           
+    flex-direction: column;  
+    justify-content: space-between; /* Espalha o conteúdo uniformemente */
+}
+
+.card .botao-entrar {
+    width: auto;             
+    margin-top: 15px;        
+    padding: 10px 30px;      
+    align-self: center;      
 }
