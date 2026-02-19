@@ -15,6 +15,5 @@ function fazerLogin(event) {
 
     alert("Login realizado com sucesso! Bem-vindo(a) " + email);
     
-    // 5. Redireciona para a página inicial
     window.location.href = "index.html";
 }
